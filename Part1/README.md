@@ -18,6 +18,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
 Images before
+
 `$ docker image ls`
 ```
 REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
@@ -26,7 +27,8 @@ httpd         latest    ac45b24b92cc   8 weeks ago     167MB
 redis         latest    170a1e90f843   2 months ago    138MB
 ```
 
-and after
+and after `docker image rm ...`
+
 `$ docker image ls`
 ```
 REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
