@@ -87,3 +87,20 @@ You found the correct password. Secret message is:
 ### 1.7
 
 Please see `Dockerfile-ex-1-7`
+
+### 1.8
+
+Please see `Dockerfile-ex-1-8`.
+
+And the commands:
+```
+$ docker build . -t web-server
+[+] Building 0.2s (5/5) FINISHED
+...
+ => => naming to docker.io/library/web-server
+
+$ docker run web-server
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. ...
+```
