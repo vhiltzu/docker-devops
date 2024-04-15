@@ -67,3 +67,23 @@ Input website:
 ```
 
 And installed curl after `docker run --name=ubuntu ...` command using `docker exec -it ubuntu bash` and then `apt update && apt install curl -y`.
+
+### 1.5
+
+The size of non alpine image is almost 100 MB (about 83 MB) and the alpine image needs about 15 MB. The alpine image alternative for the `sh` command is `/bin/sh` e.g. `$ docker exec -it <container name> /bin/sh`.
+
+### 1.6
+
+```
+$ docker run -it devopsdockeruh/pull_exercise
+```
+
+```
+Give me the password: basics
+You found the correct password. Secret message is:
+"This is the secret message"
+```
+
+### 1.7
+
+Please see `Dockerfile-ex-1-7`
