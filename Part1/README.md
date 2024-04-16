@@ -111,3 +111,9 @@ $ docker run web-server
 $ touch text.log
 $ docker run --rm -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
 ```
+
+### 1.10
+
+```
+$ docker run --rm -p 80:8080 devopsdockeruh/simple-web-service server
+```
