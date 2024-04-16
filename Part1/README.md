@@ -104,3 +104,10 @@ $ docker run web-server
 
 [GIN-debug] [WARNING] Running in "debug" mode. ...
 ```
+
+### 1.9
+
+```
+$ touch text.log
+$ docker run --rm -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+```
