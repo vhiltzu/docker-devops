@@ -125,4 +125,8 @@ Please see `Dockerfile-ex-1-11`.
 And the commands:
 ```
 $ docker build -t spring-example .
+...
+=> => naming to docker.io/library/spring-example
+
+$ docker run --rm -p 8080:8080 spring-example
 ```
