@@ -1,0 +1,22 @@
+# Use the Node image with Node version 16
+FROM node:16
+
+# Publish port 5000
+EXPOSE 5000
+
+WORKDIR /usr/src/app
+
+# Copy the source code
+COPY . .
+
+# Install needed dependencies
+RUN npm install
+
+# Build the project
+RUN npm run build
+
+# Install the serve package
+RUN npm install serve
+
+# Run the app
+CMD ["serve", "-s", "-l", "5000", "build"]
