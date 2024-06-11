@@ -16,7 +16,7 @@ RUN npm install
 RUN npm run build
 
 # Install the serve package
-RUN npm install serve
+RUN npm install -g serve
 
 # Run the app
 CMD ["serve", "-s", "-l", "5000", "build"]
