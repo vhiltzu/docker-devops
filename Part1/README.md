@@ -143,3 +143,16 @@ $ docker build -t sample-front .
 
 $ docker run --rm -p 5000:5000 sample-front
 ```
+
+### 1.13
+
+Please see `Dockerfile-ex-1-13`.
+
+And the commands:
+```
+$ docker build -t sample-back .
+...
+=> => naming to docker.io/library/sample-back
+
+$ docker run --rm -p 8080:8080 sample-back
+```
