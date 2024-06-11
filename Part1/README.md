@@ -156,3 +156,25 @@ $ docker build -t sample-back .
 
 $ docker run --rm -p 8080:8080 sample-back
 ```
+
+### 1.14
+
+Please see `Dockerfile-ex-1-14-front` and `Dockerfile-ex-1-14-back`.
+
+And the commands:
+```
+Terminal #1
+
+$ docker build -t sample-front .
+...
+
+$ docker run --rm -p 8080:8080 sample-back
+```
+```
+Terminal #2
+
+$ docker build -t sample-back .
+...
+
+$ docker run --rm -p 8080:8080 sample-back
+```
