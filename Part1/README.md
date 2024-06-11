@@ -130,3 +130,16 @@ $ docker build -t spring-example .
 
 $ docker run --rm -p 8080:8080 spring-example
 ```
+
+### 1.12
+
+Please see `Dockerfile-ex-1-12`.
+
+And the commands:
+```
+$ docker build -t sample-front .
+...
+=> => naming to docker.io/library/sample-front
+
+$ docker run --rm -p 5000:5000 sample-front
+```
