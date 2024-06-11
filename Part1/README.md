@@ -117,3 +117,12 @@ $ docker run --rm -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simp
 ```
 $ docker run --rm -p 80:8080 devopsdockeruh/simple-web-service server
 ```
+
+### 1.11
+
+Please see `Dockerfile-ex-1-11`.
+
+And the commands:
+```
+$ docker build -t spring-example .
+```
