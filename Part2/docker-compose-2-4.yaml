@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    image: vhiltzu/sample-frontend
+    build: ./example-frontend
+    container_name: frontend
+    ports:
+    - 5000:5000
+
+  backend:
+    image: vhiltzu/sample-backend
+    build: ./example-backend
+    container_name: backend
+    environment:
+    - REDIS_HOST=redis:6379
+    ports:
+    - 8080:8080
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: unless-stopped
