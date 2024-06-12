@@ -1,0 +1,22 @@
+# Use the Node image with Node version 16
+FROM node:16
+
+# Publish port 5000
+EXPOSE 5000
+
+WORKDIR /app
+
+# Copy the source code
+COPY . .
+
+# Install needed dependencies, build the project and create the appuser
+RUN npm install && \
+ npm run build && \
+ npm install -g serve && \
+ useradd -m web && \
+ chown web .
+
+USER web
+
+# Run the app
+CMD ["serve", "-s", "-l", "5000", "build"]
