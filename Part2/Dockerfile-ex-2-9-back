@@ -1,0 +1,19 @@
+# Use the golang image version 1.16
+FROM golang:1.16
+
+# Publish port 8080
+EXPOSE 8080
+
+# Define an environment variable for the cors check and Redis
+#ENV REQUEST_ORIGIN=http://localhost:5000 # Not needed anymore
+
+WORKDIR /usr/src/app
+
+# Copy the source code
+COPY . .
+
+# Build the project
+RUN go build
+
+# Run the application
+CMD ["./server"]
