@@ -16,4 +16,4 @@ RUN go build && \
 USER web
 
 # Run the application
-CMD ["./server"]
+ENTRYPOINT ["./server"]
