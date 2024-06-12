@@ -14,11 +14,14 @@ services:
     build: ./example-backend
     container_name: backend
     environment:
-    - REDIS_HOST=redis:6379
+    - REDIS_HOST=redis
     ports:
     - 8080:8080
 
   redis:
     image: redis
     container_name: redis
+    ports:
+    - 6379
+    command: "redis-server"
     restart: unless-stopped
