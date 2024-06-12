@@ -1,6 +1,6 @@
 # Part 2
 
-### 1.14
+### 2.3
 
 Please see `docker-compose-2-3.yaml`.
 
