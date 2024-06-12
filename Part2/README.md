@@ -21,3 +21,22 @@ $ docker compose up
 ### 2.4
 
 Please see `docker-compose-2-4.yaml`.
+
+### 2.5
+
+```
+$ docker compose up --scale compute=1
+```
+Failed!
+
+```
+$ docker compose up --scale compute=2
+```
+Success!
+
+```
+$ docker compose up --scale compute=3
+```
+Success!
+
+### 2.6
