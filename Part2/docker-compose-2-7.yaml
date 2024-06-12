@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    image: vhiltzu/sample-frontend
+    build: ./example-frontend
+    container_name: frontend
+    ports:
+    - 5000:5000
+
+  backend:
+    image: vhiltzu/sample-backend
+    build: ./example-backend
+    container_name: backend
+    environment:
+    - REDIS_HOST=redis
+    - POSTGRES_HOST=db
+    - POSTGRES_PASSWORD=1234
+    ports:
+    - 8080:8080
+
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+    - 6379
+    restart: unless-stopped
+    command: "redis-server"
+
+  db:
+    image: postgres
+    container_name: postgres
+    ports:
+    - 5432
+    environment:
+      POSTGRES_PASSWORD: 1234
+    volumes:
+    - ./database:/var/lib/postgresql/data
+    restart: unless-stopped
+    
+    # Postgres variables
+    shm_size: 128mb
