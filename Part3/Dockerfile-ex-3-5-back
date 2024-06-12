@@ -1,0 +1,21 @@
+# Use the golang image version 1.16-alpine
+FROM golang:1.16-alpine
+
+# Publish port 8080
+EXPOSE 8080
+
+WORKDIR /app
+
+# Copy the source code
+COPY . .
+
+# Build the project
+RUN go build
+
+# create the appuser named 'web' and do other operations below
+RUN adduser web -D
+RUN chown web .
+USER web
+
+# Run the application
+CMD ["./server"]
