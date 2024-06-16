@@ -33,4 +33,4 @@ sample-back                                  latest    ...            ...       
 
 Please see `Dockerfile-3-9-back`.
 
-I used [https://dev.to/chseki/build-a-super-minimalistic-docker-image-to-run-your-golang-app-33j0](this article) as a tutorial.
+I used [this article](https://dev.to/chseki/build-a-super-minimalistic-docker-image-to-run-your-golang-app-33j0) as a tutorial.
