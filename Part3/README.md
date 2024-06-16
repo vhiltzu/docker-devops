@@ -1,6 +1,6 @@
 # Part 3
 
-Skipping the exercises 3.1-3.4 and 3.11 for now
+Skipping the exercises 3.1-3.4 and 3.10-3.11 for now
 
 ### 3.5
 
@@ -17,3 +17,11 @@ Sizes
 |----------|-------------|------------|
 | frontend | 1.28GB      | 483MB      |
 | backend  | 1.07GB      | 447MB      |
+
+### 3.8
+
+Please see `Dockerfile-3-8-front`.
+
+### 3.9
+
+Please see `Dockerfile-3-9-back`.
