@@ -24,4 +24,13 @@ Please see `Dockerfile-3-8-front`.
 
 ### 3.9
 
+```
+REPOSITORY                                   TAG       IMAGE ID       CREATED          SIZE
+...                                          ...       ...            ...              ...
+sample-back                                  latest    ...            ...              18MB
+...                                          ...       ...            ...              ...
+```
+
 Please see `Dockerfile-3-9-back`.
+
+I used [https://dev.to/chseki/build-a-super-minimalistic-docker-image-to-run-your-golang-app-33j0](this article) as a tutorial.
