@@ -1,0 +1,22 @@
+# Use the Node image with Node version 16-alpine
+FROM node:16-alpine as build
+
+WORKDIR /app
+
+# Copy the source code
+COPY . .
+
+# Install needed dependencies, build the project and create the appuser
+RUN npm install && \
+npm run build && \
+npm install -g serve && \
+adduser web -D && \
+chown web .
+
+USER web
+
+# Use alpine nginx. Nginx will expose port 80.
+FROM nginx:1.27-alpine
+
+# Make sure that app is served from <path to nginx>/html 
+COPY --from=build /app/build /usr/share/nginx/html
